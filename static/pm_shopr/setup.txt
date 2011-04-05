@@ -1,0 +1,17 @@
+#	SHOPR* PLUGIN
+#-------------------------------------------------------
+plugin.tx_pmshopr_pi1 {
+    pid=28
+	pidlist = 29
+    loginpid = 17
+	templateFile = typo3conf/ext/pm_shopr/pi1/template.html 
+    unit=EUR
+}
+
+plugin.tx_pmshopr_pi3 {
+    pid=28
+	pidlist = 29
+    loginpid = 17
+	templateFile = typo3conf/ext/pm_shopr/pi3/template.html
+    unit=EUR
+}

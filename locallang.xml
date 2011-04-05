@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'pm_shopr'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Shopr* Entertainment</label>
+			<label index="pi1_plus_wiz_description">Shopr* Entertainment Plugin</label>
+			<label index="pi3_title">Shopr* Teaser</label>
+			<label index="pi3_plus_wiz_description">Shopr* TeaserPlugin</label>
+		</languageKey>
+	</data>
+</T3locallang>

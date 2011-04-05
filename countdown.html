@@ -1,0 +1,86 @@
+<!-- ###COUNTDOWNTMPL### start -->
+<script language="Javascript">
+<!--
+
+###ENDTIME###
+
+function CountdownAnzeigen()
+{
+    var Jetzt = new Date();
+    var Countdown = new Date(CountdownJahr, CountdownMonat-1, CountdownTag, CountdownStunde, CountdownMinute, CountdownSekunde);
+    var MillisekundenBisCountdown = Countdown.getTime()-Jetzt.getTime();
+    var Rest = Math.floor(MillisekundenBisCountdown/1000);
+    var CountdownText = "";
+
+    if(Rest >= 31536000)
+    {
+        var Jahre = Math.floor(Rest/31536000);
+        Rest = Rest-Jahre*31536000;
+
+        if(Jahre > 1 || Jahre == 0)
+        {
+            CountdownText += Jahre + " Jahre ";
+        }
+        else if(Jahre == 1)
+        {
+            CountdownText += Jahre + " Jahr ";
+        }
+    }
+    if(Rest >= 86400)
+    {
+        var Tage = Math.floor(Rest/86400);
+        Rest = Rest-Tage*86400;
+
+        if(Tage > 1 || Tage == 0)
+        {
+            CountdownText += Tage + " Tage ";
+        }
+        else if(Tage == 1)
+        {
+            CountdownText += Tage + " Tag ";
+        }
+    }
+    if(Rest >= 3600)
+    {
+        var Stunden = Math.floor(Rest/3600);
+        Rest = Rest-Stunden*3600;
+
+        if(Stunden > 1 || Stunden == 0)
+        {
+            CountdownText += Stunden + " Stunden ";
+        }
+        else if(Stunden == 1)
+        {
+            CountdownText += Stunden + " Stunde ";
+        }
+    }
+    if(Rest >= 60)
+    {
+        var Minuten = Math.floor(Rest/60);
+        Rest = Rest-Minuten*60;
+
+        if(Minuten > 1 || Minuten == 0)
+        {
+            CountdownText += Minuten + " Minuten ";
+        }
+        else if(Minuten == 1)
+        {
+            CountdownText += Minuten + " Minute ";
+        }
+    }
+
+    if(Rest > 1 || Rest == 0)
+    {
+        CountdownText += Rest + " Sekunden ";
+    }
+    else if(Rest==1)
+    {
+        CountdownText += Rest + " Sekunde ";
+    }
+
+    document.getElementById('Countdown').innerHTML = CountdownText;
+    window.setTimeout("CountdownAnzeigen()", 1000);
+}
+//-->
+</script>
+<!-- ###COUNTDOWNTMPL### ende -->		
